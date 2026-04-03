@@ -131,7 +131,7 @@ const infos = [
                 class="input-field resize-none"></textarea>
             </div>
 
-            <button type="submit" :disabled="sending"
+            <button type="submit" :disabled="true"
               class="w-full btn-primary justify-center py-3.5 disabled:opacity-50 disabled:cursor-not-allowed">
               <template v-if="sending">
                 <svg class="w-4 h-4 animate-spin" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
@@ -141,7 +141,7 @@ const infos = [
                 Envoi en cours...
               </template>
               <template v-else>
-                Envoyer le message
+                Envoyer le message(indisponible pour le moment)
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5"/>
                 </svg>
