@@ -1,13 +1,13 @@
-<script setup>
+<script setup> 
 import { ref } from 'vue'
 
 const projects = [
-  { id:'restaucity',            name:'RestauCity',           desc:'Application web de gestion de restaurant avec menu interactif et commandes en ligne.',    url:'https://restaucity.vercel.app/',           tags:['Vue.js','TailwindCSS','Supabase'] },
-  { id:'restaucity-formulaire', name:'RestauCity Formulaire',desc:'Formulaire de réservation et commande en ligne pour la plateforme RestauCity.',           url:'https://restaucity-formulaire.vercel.app/',tags:['HTML','CSS','JavaScript'] },
-  { id:'SupportDesk',           name:'SupportDesk',          desc:'Système de ticketing IT',                                                                 url:'https://ticketing-ochre-zeta.vercel.app/', tags:['Vue.js','TailwindCSS','NodeJs','Postgresql'] },
-  { id:'styve-meteo',           name:'Styve Météo',          desc:'Application météo en temps réel avec API externe et géolocalisation automatique.',        url:'https://styve-meteo.vercel.app/',          tags:['Vue.js','API REST','TailwindCSS'] },
-  { id:'est-littoral',          name:'EST-Littoral',         desc:'Site institutionnel de l\'École Supérieure de Technologie du Littoral.',                  url:'https://est-littoral.vercel.app/',         tags:['HTML','CSS','JavaScript'] },
+  { id:'restaucity',            name:'RestauCity',           desc:'Application web de gestion de restaurant avec menu interactif et commandes en ligne.',    url:'https://restaucity.vercel.app/',           tags:['VueJS','TailwindCSS','Supabase'] },
+  { id:'restaucity-formulaire', name:'RestauCity Formulaire',desc:'Formulaire de réservation et commande en ligne pour la plateforme RestauCity.',           url:'https://restaucity-formulaire.vercel.app/',tags:['VueJS','TailwindCSS','Supabase'] },
+  { id:'SupportDesk',           name:'SupportDesk',          desc:'Système de ticketing IT',                                                                 url:'https://ticketing-ochre-zeta.vercel.app/', tags:['VueJS','TailwindCSS','NodeJs','Postgresql'] },
+  { id:'styve-meteo',           name:'Styve Météo',          desc:'Application météo en temps réel avec API externe et géolocalisation automatique.',        url:'https://styve-meteo.vercel.app/',          tags:['VueJS','API REST','TailwindCSS'] },
   { id:'adressage',             name:'Adressage',            desc:'Calculateur interactif de sous-réseaux IP pour administrateurs réseau.',                  url:'https://adressage-rx.vercel.app/',         tags:['HTML','CSS','Javascript'] },
+  { id:'est-littoral',          name:'EST-Littoral',         desc:'Site institutionnel de l\'École Supérieure de Technologie du Littoral.',                  url:'https://est-littoral.vercel.app/',         tags:['HTML','CSS','JavaScript'] },
   { id:'afana',                 name:'AFANA',                desc:'Site web associatif moderne pour l\'association AFANA.',                                  url:'https://afana.vercel.app/',                tags:['HTML','CSS','Javascript'] },
  ]
 

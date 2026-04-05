@@ -4,13 +4,69 @@ import { useRoute } from 'vue-router'
 const route = useRoute()
 
 const projects = {
-  'restaucity':           { name:'RestauCity',           url:'https://restaucity.vercel.app/',           year:'2024', type:'Application Web',     tags:['HTML','CSS','JavaScript','UI/UX'],       desc:'Solution complète pour restaurateurs : menu digital interactif, commandes en ligne, tableau de bord administration et gestion des réservations.' },
-  'restaucity-formulaire':{ name:'RestauCity Formulaire', url:'https://restaucity-formulaire.vercel.app/',year:'2024', type:'Module Web',          tags:['HTML','CSS','JavaScript','Validation'],  desc:'Module de formulaire avancé pour RestauCity : réservations, commandes avec validation côté client, interface responsive mobile et desktop.' },
-  'styve-meteo':          { name:'Styve Météo',           url:'https://styve-meteo.vercel.app/',          year:'2024', type:'Application Web',     tags:['JavaScript','API REST','CSS','Géoloc'],  desc:'Prévisions météo en temps réel : météo actuelle, prévisions 7 jours, géolocalisation automatique et visualisations graphiques.' },
-  'est-littoral':         { name:'EST-Littoral',          url:'https://est-littoral.vercel.app/',         year:'2024', type:'Site Institutionnel',  tags:['HTML','CSS','JavaScript','Responsive'],  desc:'Site web institutionnel complet : filières de formation, actualités, calendrier académique, informations pour étudiants et administration.' },
-  'adressage':            { name:'Adressage',             url:'https://adressage-rx.vercel.app/',         year:'2024', type:'Outil Technique',     tags:['JavaScript','Réseaux IP','HTML','CSS'],  desc:'Calculateur de sous-réseaux IP : adresses, masques, plages d\'hôtes et VLSM. Outil indispensable pour techniciens réseau.' },
-  'afana':                { name:'AFANA',                 url:'https://afana.vercel.app/',                year:'2024', type:'Site Associatif',     tags:['HTML','CSS','JavaScript','Vue.js'],       desc:'Site web professionnel pour l\'association AFANA : présentation des activités, galerie photos et formulaire d\'adhésion.' },
-}
+  'restaucity': {
+    name: 'RestauCity',
+    url: 'https://restaucity.vercel.app/',
+    year: '2025',
+    type: 'Application Web',
+    tags: ['VueJS', 'TailwindCSS', 'Supabase'],
+    desc: 'Application web de gestion de restaurant avec menu interactif et commandes en ligne.'
+  },
+
+  'restaucity-formulaire': {
+    name: 'RestauCity Formulaire',
+    url: 'https://restaucity-formulaire.vercel.app/',
+    year: '2025',
+    type: 'Module Web',
+    tags: ['VueJS', 'TailwindCSS', 'Supabase'],
+    desc: 'Formulaire de réservation et commande en ligne pour la plateforme RestauCity.'
+  },
+
+  'SupportDesk': {
+    name: 'SupportDesk',
+    url: 'https://ticketing-ochre-zeta.vercel.app/',
+    year: '2025',
+    type: 'Système de ticketing',
+    tags: ['VueJS', 'TailwindCSS', 'NodeJs', 'Postgresql'],
+    desc: 'Système de ticketing IT'
+  },
+
+  'styve-meteo': {
+    name: 'Styve Météo',
+    url: 'https://styve-meteo.vercel.app/',
+    year: '2025',
+    type: 'Application Web',
+    tags: ['VueJS', 'API REST', 'TailwindCSS'],
+    desc: 'Application météo en temps réel avec API externe et géolocalisation automatique.'
+  },
+
+  'adressage': {
+    name: 'Adressage',
+    url: 'https://adressage-rx.vercel.app/',
+    year: '2024',
+    type: 'Outil Technique',
+    tags: ['HTML', 'CSS', 'Javascript'],
+    desc: 'Calculateur interactif de sous-réseaux IP pour administrateurs réseau.'
+  },
+
+  'est-littoral': {
+    name: 'EST-Littoral',
+    url: 'https://est-littoral.vercel.app/',
+    year: '2024',
+    type: 'Site Institutionnel',
+    tags: ['HTML', 'CSS', 'JavaScript'],
+    desc: "Site web institutionnel de l'École Supérieure de Technologie du Littoral."
+  },
+
+  'afana': {
+    name: 'AFANA',
+    url: 'https://afana.vercel.app/',
+    year: '2024',
+    type: 'Site Associatif',
+    tags: ['HTML', 'CSS', 'JavaScript'],
+    desc: "Site web associatif moderne pour l'association AFANA."
+  }
+};
 
 const p = computed(() => projects[route.params.id] || null)
 </script>
