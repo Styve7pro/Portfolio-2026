@@ -25,7 +25,7 @@ const projects = {
   'SupportDesk': {
     name: 'SupportDesk',
     url: 'https://ticketing-ochre-zeta.vercel.app/',
-    year: '2025',
+    year: '2026',
     type: 'Système de ticketing',
     tags: ['VueJS', 'TailwindCSS', 'NodeJs', 'Postgresql'],
     desc: 'Système de ticketing IT'
