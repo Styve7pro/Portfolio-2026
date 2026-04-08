@@ -6,10 +6,11 @@ const projects = [
   { id:'restaucity-formulaire', name:'RestauCity Formulaire',desc:'Formulaire de réservation et commande en ligne pour la plateforme RestauCity.',           url:'https://restaucity-formulaire.vercel.app/',tags:['VueJS','TailwindCSS','Supabase'] },
   { id:'SupportDesk',           name:'SupportDesk',          desc:'Système de ticketing IT',                                                                 url:'https://ticketing-ochre-zeta.vercel.app/', tags:['VueJS','TailwindCSS','NodeJs','Postgresql'] },
   { id:'styve-meteo',           name:'Styve Météo',          desc:'Application météo en temps réel avec API externe et géolocalisation automatique.',        url:'https://styve-meteo.vercel.app/',          tags:['VueJS','API REST','TailwindCSS'] },
+  { id:'wifi-scanner',          name:'Wifi Scanner',         desc:'Application web permettant de scanner des QR codes WiFi et d’extraire automatiquement SSID, mot de passe et type de sécurité.', url:'https://styvewifi.vercel.app/', tags:['VueJS','jsQR','TailwindCSS'] },
   { id:'adressage',             name:'Adressage',            desc:'Calculateur interactif de sous-réseaux IP pour administrateurs réseau.',                  url:'https://adressage-rx.vercel.app/',         tags:['HTML','CSS','Javascript'] },
   { id:'est-littoral',          name:'EST-Littoral',         desc:'Site institutionnel de l\'École Supérieure de Technologie du Littoral.',                  url:'https://est-littoral.vercel.app/',         tags:['HTML','CSS','JavaScript'] },
   { id:'afana',                 name:'AFANA',                desc:'Site web associatif moderne pour l\'association AFANA.',                                  url:'https://afana.vercel.app/',                tags:['HTML','CSS','Javascript'] },
- ]
+]
 
 const iframeState = ref(
   Object.fromEntries(projects.map(p => [p.id, { loaded:false, error:false }]))

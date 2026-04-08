@@ -40,6 +40,15 @@ const projects = {
     desc: 'Application météo en temps réel avec API externe et géolocalisation automatique.'
   },
 
+  'wifi-scanner': {
+    name: 'Wifi Scanner',
+    url: 'https://styvewifi.vercel.app/',
+    year: '2026',
+    type: 'Application Web',
+    tags: ['VueJS', 'jsQR', 'TailwindCSS'],
+    desc: 'Application web permettant de scanner des QR codes WiFi et d’extraire automatiquement le SSID, le mot de passe et le type de sécurité.'
+  },
+
   'adressage': {
     name: 'Adressage',
     url: 'https://adressage-rx.vercel.app/',
