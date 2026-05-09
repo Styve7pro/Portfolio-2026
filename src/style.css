@@ -1,0 +1,154 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { @apply font-sans antialiased text-[15px]; }
+  ::selection { background: #10B981; color: #0A0A0A; }
+
+  ::-webkit-scrollbar       { width: 3px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: #262626; border-radius: 999px; }
+  .dark ::-webkit-scrollbar-thumb { background: #10B981; }
+}
+
+@layer components {
+
+  /* ── Boutons ── */
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium
+           bg-em-light text-white dark:bg-em dark:text-dk-bg
+           hover:opacity-90 active:scale-95
+           transition-all duration-150
+           focus:outline-none focus:ring-2 focus:ring-em/40;
+  }
+  .btn-outline {
+    @apply inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium
+           border border-lt-border dark:border-dk-border
+           text-lt-text dark:text-dk-text
+           hover:border-em-light dark:hover:border-em
+           hover:text-em-light dark:hover:text-em
+           active:scale-95 transition-all duration-150;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm
+           text-lt-muted dark:text-dk-muted
+           hover:text-lt-text dark:hover:text-dk-text
+           hover:bg-lt-section dark:hover:bg-dk-section
+           transition-all duration-150;
+  }
+
+  /* ── Cards ── */
+  .card {
+    @apply bg-lt-card dark:bg-dk-card
+           border border-lt-border dark:border-dk-border
+           rounded-xl transition-colors duration-200;
+  }
+  .card-hover {
+    @apply card hover:border-lt-subtle dark:hover:border-dk-subtle
+           hover:shadow-sm transition-all duration-200;
+  }
+
+  /* ── Typography ── */
+  .section-label {
+    @apply text-xs font-medium uppercase tracking-[0.12em]
+           text-em-light dark:text-em;
+  }
+  .section-title {
+    @apply font-display font-semibold tracking-tight
+           text-3xl md:text-4xl leading-[1.15]
+           text-lt-text dark:text-dk-text;
+  }
+  .body-text {
+    @apply text-sm leading-relaxed text-lt-muted dark:text-dk-muted;
+  }
+
+  /* ── Social icon ── */
+  .social-icon {
+    @apply flex items-center justify-center w-9 h-9 rounded-lg
+           border border-lt-border dark:border-dk-border
+           text-lt-muted dark:text-dk-muted
+           hover:border-em-light dark:hover:border-em
+           hover:text-em-light dark:hover:text-em
+           transition-all duration-150;
+  }
+
+  /* ── Nav link ── */
+  .nav-link {
+    @apply text-sm font-medium text-lt-muted dark:text-dk-muted
+           hover:text-lt-text dark:hover:text-dk-text
+           transition-colors duration-150 relative;
+  }
+  .nav-link.active {
+    @apply text-lt-text dark:text-dk-text;
+  }
+  .nav-link.active::after {
+    content: '';
+    @apply absolute -bottom-0.5 left-0 right-0 h-px bg-em-light dark:bg-em rounded-full;
+  }
+
+  /* ── Progress ── */
+  .progress-track { @apply h-1 w-full rounded-full bg-lt-border dark:bg-dk-border overflow-hidden; }
+  .progress-fill  { @apply h-full rounded-full bg-em-light dark:bg-em transition-all duration-1000 ease-out; }
+
+  /* ── Skill card ── */
+  .skill-card {
+    @apply card-hover p-5 flex flex-col items-center gap-3
+           hover:-translate-y-0.5 cursor-default;
+  }
+
+  /* ── Tag ── */
+  .tag {
+    @apply inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium
+           bg-lt-section dark:bg-dk-section
+           text-lt-muted dark:text-dk-muted
+           border border-lt-border dark:border-dk-border;
+  }
+  .tag-accent {
+    @apply inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium
+           text-em-light dark:text-em;
+    background-color: rgba(5, 150, 105, 0.10);
+    border: 1px solid rgba(5, 150, 105, 0.20);
+  }
+  .dark .tag-accent {
+    background-color: rgba(16, 185, 129, 0.10);
+    border-color: rgba(16, 185, 129, 0.20);
+  }
+
+  /* ── Input ── */
+  .input-field {
+    @apply w-full px-4 py-3 rounded-lg text-sm
+           bg-lt-section dark:bg-dk-section
+           border border-lt-border dark:border-dk-border
+           text-lt-text dark:text-dk-text
+           focus:outline-none focus:border-em-light dark:focus:border-em
+           transition-colors duration-150;
+  }
+  .input-field::placeholder {
+    color: rgba(107, 114, 128, 0.5);
+  }
+  .dark .input-field::placeholder {
+    color: rgba(115, 115, 115, 0.5);
+  }
+
+  /* ── Divider ── */
+  .divider { @apply h-px w-full bg-lt-border dark:bg-dk-border; }
+}
+
+/* page transitions */
+.page-enter-active, .page-leave-active { transition: opacity .2s ease, transform .2s ease; }
+.page-enter-from  { opacity:0; transform:translateY(8px); }
+.page-leave-to    { opacity:0; transform:translateY(-4px); }
+
+/* iframe shimmer */
+.preview-shimmer {
+  background: linear-gradient(90deg, #141414 25%, #1c1c1c 50%, #141414 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.6s infinite;
+}
+.light .preview-shimmer {
+  background: linear-gradient(90deg, #F9FAFB 25%, #f0f0f0 50%, #F9FAFB 75%);
+  background-size: 200% 100%;
+}
+@keyframes shimmer { 0%{ background-position:200% 0 } 100%{ background-position:-200% 0 } }
