@@ -1,6 +1,5 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import Home from '@/views/Home.vue'
-<<<<<<< HEAD
 import { authenticated } from '@/stores/admin.js'
 
 const routes = [
@@ -16,17 +15,6 @@ const routes = [
   { path: '/x-admin',         name: 'admin-login',    component: () => import('@/views/admin/AdminLogin.vue') },
   { path: '/x-admin/panel',   name: 'admin-panel',    component: () => import('@/views/admin/AdminPanel.vue'),
     beforeEnter: (to, from, next) => { authenticated.value ? next() : next('/x-admin') } },
-=======
-
-const routes = [
-  { path: '/', name: 'home', component: Home },
-  { path: '/about', name: 'about', component: () => import('@/views/About.vue') },
-  { path: '/services', name: 'services', component: () => import('@/views/Services.vue') },
-  { path: '/skills', name: 'skills', component: () => import('@/views/Skills.vue') },
-  { path: '/projects', name: 'projects', component: () => import('@/views/Projects.vue') },
-  { path: '/projects/:id', name: 'project-detail', component: () => import('@/views/ProjectDetail.vue') },
-  { path: '/contact', name: 'contact', component: () => import('@/views/Contact.vue') },
->>>>>>> f0432618e88b35a4b0ca94eb8713086482e3c474
   { path: '/:pathMatch(.*)*', redirect: '/' },
 ]
 
