@@ -1,5 +1,6 @@
 <script setup>
 import { ref, onMounted, provide } from 'vue'
+<<<<<<< HEAD
 import { useRoute } from 'vue-router'
 import Navbar from '@/components/Navbar.vue'
 import Footer from '@/components/Footer.vue'
@@ -11,6 +12,17 @@ const route  = useRoute()
 const applyTheme = (dark) => {
   dark ? document.documentElement.classList.add('dark')
        : document.documentElement.classList.remove('dark')
+=======
+import Navbar from '@/components/Navbar.vue'
+import Footer from '@/components/Footer.vue'
+
+const isDark = ref(true)
+
+const applyTheme = (dark) => {
+  dark
+    ? document.documentElement.classList.add('dark')
+    : document.documentElement.classList.remove('dark')
+>>>>>>> f0432618e88b35a4b0ca94eb8713086482e3c474
 }
 const toggleTheme = () => {
   isDark.value = !isDark.value
@@ -21,8 +33,11 @@ onMounted(() => {
   const saved = localStorage.getItem('theme')
   isDark.value = saved !== 'light'
   applyTheme(isDark.value)
+<<<<<<< HEAD
   // track first visit
   trackVisit(window.location.hash.replace('#','') || '/')
+=======
+>>>>>>> f0432618e88b35a4b0ca94eb8713086482e3c474
 })
 
 provide('isDark', isDark)

@@ -1,5 +1,6 @@
 <script setup>
 import SocialLinks from './SocialLinks.vue'
+<<<<<<< HEAD
 import { t } from '@/i18n/index.js'
 const year = new Date().getFullYear()
 
@@ -11,6 +12,17 @@ const links = [
   { to:'/projects',       key:'projects'       },
   { to:'/certifications', key:'certifications' },
   { to:'/contact',        key:'contact'        },
+=======
+const year = new Date().getFullYear()
+
+const links = [
+  { to:'/',         label:'Accueil'     },
+  { to:'/about',    label:'À propos'    },
+  { to:'/services', label:'Services'    },
+  { to:'/skills',   label:'Compétences' },
+  { to:'/projects', label:'Projets'     },
+  { to:'/contact',  label:'Contact'     },
+>>>>>>> f0432618e88b35a4b0ca94eb8713086482e3c474
 ]
 </script>
 
@@ -25,19 +37,32 @@ const links = [
             Styve<span class="text-em-light dark:text-em">.</span>
           </RouterLink>
           <p class="text-sm text-lt-muted dark:text-dk-muted leading-relaxed">
+<<<<<<< HEAD
             Technicien Réseaux &amp; Maintenance<br>Développeur Web · Pointe-Noire, Congo
+=======
+            Technicien Réseaux &amp; Maintenance<br>
+            Développeur Web · Pointe-Noire, Congo
+>>>>>>> f0432618e88b35a4b0ca94eb8713086482e3c474
           </p>
           <SocialLinks />
         </div>
 
         <!-- navigation -->
         <div>
+<<<<<<< HEAD
           <p class="section-label mb-5">{{ t.value?.footer?.nav || 'Navigation' }}</p>
+=======
+          <p class="section-label mb-5">Navigation</p>
+>>>>>>> f0432618e88b35a4b0ca94eb8713086482e3c474
           <ul class="space-y-2.5">
             <li v-for="l in links" :key="l.to">
               <RouterLink :to="l.to"
                 class="text-sm text-lt-muted dark:text-dk-muted hover:text-lt-text dark:hover:text-dk-text transition-colors">
+<<<<<<< HEAD
                 {{ t.value?.nav?.[l.key] || l.key }}
+=======
+                {{ l.label }}
+>>>>>>> f0432618e88b35a4b0ca94eb8713086482e3c474
               </RouterLink>
             </li>
           </ul>
@@ -45,7 +70,11 @@ const links = [
 
         <!-- contact -->
         <div>
+<<<<<<< HEAD
           <p class="section-label mb-5">{{ t.value?.footer?.contact || 'Contact' }}</p>
+=======
+          <p class="section-label mb-5">Contact</p>
+>>>>>>> f0432618e88b35a4b0ca94eb8713086482e3c474
           <ul class="space-y-2.5 text-sm text-lt-muted dark:text-dk-muted">
             <li>
               <a href="mailto:styvem51@gmail.com"
@@ -64,6 +93,7 @@ const links = [
         </div>
       </div>
 
+<<<<<<< HEAD
       <!-- ligne de séparation -->
       <div class="divider mb-6"></div>
 
@@ -86,6 +116,17 @@ const links = [
             ·
           </RouterLink>
         </div>
+=======
+      <!-- bas de page -->
+      <div class="divider mb-6"></div>
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-3">
+        <p class="text-xs text-lt-muted dark:text-dk-muted">
+          © {{ year }} Styve M'BOUMBA — Tous droits réservés
+        </p>
+        <p class="text-xs text-lt-muted dark:text-dk-muted">
+          Vue 3 + Tailwind CSS
+        </p>
+>>>>>>> f0432618e88b35a4b0ca94eb8713086482e3c474
       </div>
     </div>
   </footer>

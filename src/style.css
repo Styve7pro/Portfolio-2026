@@ -107,6 +107,7 @@
   }
   .tag-accent {
     @apply inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium
+<<<<<<< HEAD
            text-em-light dark:text-em;
     background-color: rgba(5, 150, 105, 0.10);
     border: 1px solid rgba(5, 150, 105, 0.20);
@@ -114,6 +115,11 @@
   .dark .tag-accent {
     background-color: rgba(16, 185, 129, 0.10);
     border-color: rgba(16, 185, 129, 0.20);
+=======
+           bg-em-light/10 dark:bg-em/10
+           text-em-light dark:text-em
+           border border-em-light/20 dark:border-em/20;
+>>>>>>> f0432618e88b35a4b0ca94eb8713086482e3c474
   }
 
   /* ── Input ── */
@@ -122,6 +128,7 @@
            bg-lt-section dark:bg-dk-section
            border border-lt-border dark:border-dk-border
            text-lt-text dark:text-dk-text
+<<<<<<< HEAD
            focus:outline-none focus:border-em-light dark:focus:border-em
            transition-colors duration-150;
   }
@@ -131,6 +138,13 @@
   .dark .input-field::placeholder {
     color: rgba(115, 115, 115, 0.5);
   }
+=======
+           placeholder:text-lt-muted/50 dark:placeholder:text-dk-muted/50
+           focus:outline-none focus:border-em-light dark:focus:border-em
+           focus:ring-1 focus:ring-em-light/20 dark:focus:ring-em/20
+           transition-colors duration-150;
+  }
+>>>>>>> f0432618e88b35a4b0ca94eb8713086482e3c474
 
   /* ── Divider ── */
   .divider { @apply h-px w-full bg-lt-border dark:bg-dk-border; }
